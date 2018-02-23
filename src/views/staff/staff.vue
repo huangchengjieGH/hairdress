@@ -58,7 +58,7 @@
                         url: url,
                         method: 'get'
                     }).then(res => {
-                        console.log(res);
+                        // console.log(res);
                         that.processServicesData(res.data.data);
                         resolve();
                     }, err => {
@@ -97,7 +97,7 @@
                     barbers.push(temp);
                 }
                 that.barberList = this.barberData = barbers;
-                console.log(that.barberList);
+                // console.log(that.barberList);
             },
             getData () {
                 this.columnsList = tableData.table1Columns;
@@ -134,7 +134,7 @@
             }
         },
         mounted () {
-            console.log('mounted');
+            // console.log('mounted');
             this.getBarberLists();
         },
         created () {

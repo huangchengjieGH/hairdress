@@ -95,7 +95,7 @@
                         url: url,
                         method: 'get'
                     }).then(res => {
-                        console.log(res);
+                        // console.log(res);
                         that.serviceClassifyList = res.data.data;
                         resolve();
                     }, err => {
@@ -159,14 +159,14 @@
                     }
                 }
                 this.serviceList = this.serviceListData = serviceList;
-                console.log(serviceList);
+                // console.log(serviceList);
             },
             handleAddNewTag () {
                 this.addingNewTag = !this.addingNewTag;
             },
             handleSelectTag () {
                 localStorage.tagsList = JSON.stringify(this.articleTagSelected); // 本地存储文章标签列表
-                console.log(this.articleTagSelected);
+                // console.log(this.articleTagSelected);
             },
             createNewTag () {
                 if (this.newTagName.length !== 0) {
@@ -186,8 +186,8 @@
             },
             handleDel (val, index) {
                 this.deleteService(this.serviceListData[index].id);
-                console.log(index);
-                console.log(this.serviceListData[index].id);
+                // console.log(index);
+                // console.log(this.serviceListData[index].id);
             },
             handleAddService () {
                 let query = {};
@@ -220,12 +220,12 @@
             }
         },
         mounted () {
-            console.log('mounted');
+            // console.log('mounted');
             this.getService();
             this.getServiceClassifyList();
         },
         created () {
-            console.log('created');
+            // console.log('created');
             this.getData();
         },
         activated () {

@@ -224,7 +224,7 @@
         },
         methods: {
             initPermission () {
-                console.log("initPermission");
+                // console.log("initPermission");
                 const that = this;
                 that.user.explain = [];
                 // console.log("hcj");
@@ -389,7 +389,7 @@
                     if (res.data.status === 1) {
                         that.adminList.splice(0, that.adminList.length, ...res.data.data);
                         that.adminSum = res.data.extra.count || that.adminList.length;
-                        console.log(that.adminList);
+                        // console.log(that.adminList);
                     } else {
                         that.$Notice.error({
                             title: '通知',
@@ -440,7 +440,7 @@
                 const that = this;
                 if (that.group.role) {
                     let permissions = [];
-                    console.log(that.group.permissions);
+                    // console.log(that.group.permissions);
                     that.group.permissions.forEach(item => {
                         permissions.push({
                             id: item
@@ -455,12 +455,12 @@
                         role: that.group.role,
                         permissions,
                     };
-                    console.log(that.group);
+                    // console.log(that.group);
                     if (that.group.id) {
                         url = `api/user/role/update/${that.group.id}`;
                         method = 'put';
                     }
-                    console.log(data);
+                    // console.log(data);
                     that.$axios({
                         url: url,
                         method: method,
@@ -675,7 +675,7 @@
             saveAdminInfo (type) {
                 const that = this;
                 if (type) {
-                    console.log("确定");
+                    // console.log("确定");
                     if (that.isValidAdmin()) {
                         let method = 'post';
                         let url = '/api/user';
@@ -734,7 +734,7 @@
                         });
                     }
                 } else {
-                    console.log("取消");
+                    // console.log("取消");
                     if (that.isEdit) {
                         that.clearAdminInfo();
                     }

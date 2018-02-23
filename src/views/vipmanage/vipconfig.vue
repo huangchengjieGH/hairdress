@@ -89,7 +89,7 @@
                         url: url,
                         method: 'get'
                     }).then(res => {
-                        console.log(res);
+                        // console.log(res);
                         that.processVipRankMsg(res.data.data);
                         resolve();
                     }, err => {
@@ -105,7 +105,7 @@
                         url: url,
                         method: 'get'
                     }).then(res => {
-                        console.log(res);
+                        // console.log(res);
                         that.processRechargeDiscount(res.data.data);
                         resolve();
                     }, err => {
@@ -121,7 +121,7 @@
                         method: 'post',
                         data: obj
                     }).then(res => {
-                        console.log(res);
+                        // console.log(res);
                         resolve();
                     }, err => {
                         console.log(err);
@@ -136,7 +136,7 @@
                         method: 'post',
                         data: obj
                     }).then(res => {
-                        console.log(res);
+                        // console.log(res);
                         resolve();
                     }, err => {
                         console.log(err);
@@ -151,7 +151,7 @@
                         url: url,
                         method: 'post'
                     }).then(res => {
-                        console.log(res);
+                        // console.log(res);
                         resolve();
                     }, err => {
                         console.log(err);
@@ -167,7 +167,7 @@
                         method: 'post',
                         data: obj
                     }).then(res => {
-                        console.log(res);
+                        // console.log(res);
                         that.getRechargeDiscountMsg();
                         resolve();
                     }, err => {
@@ -177,11 +177,11 @@
             },
             processVipRankMsg (data) {
                 this.vipRankList = this.vipRankData = data;
-                console.log(this.vipRankList);
+                // console.log(this.vipRankList);
             },
             processRechargeDiscount (data) {
                 this.rechargeDiscountList = this.rechargeDiscountData = data;
-                console.log(this.rechargeDiscountList);
+                // console.log(this.rechargeDiscountList);
             },
             handleDel (val, index) {
                 const that = this;
@@ -194,8 +194,8 @@
                 const that = this;
                 this.$Message.success('删除了第' + (index + 1) + '行数据');
                 // console.log(that.vipCustomerData);
-                console.log('haha');
-                console.log(that.rechargeDiscountData[index].id);
+                // console.log('haha');
+                // console.log(that.rechargeDiscountData[index].id);
                 this.delRechargeDiscountMsg(that.rechargeDiscountData[index].id);
             },
             handleCellChange (val, index, key) {
@@ -209,11 +209,11 @@
             handleRechargeChange (val, index) {
                 this.$Message.success('修改了第' + (index + 1) + '行数据');
                 // console.log(this.vipCustomerList[index]);
-                console.log(this.rechargeDiscountList[index]);
+                // console.log(this.rechargeDiscountList[index]);
                 this.changeRechargeDiscountMsg(this.rechargeDiscountList[index]);
             },
             modal_ok () {
-                this.$Message.info('Clicked ok');
+                // this.$Message.info('Clicked ok');
                 const that = this;
                 let obj = {
                     sellerId: 2,
@@ -224,7 +224,7 @@
                 this.addRechargeDiscountMsg(obj);
             },
             modal_cancel () {
-                this.$Message.info('Clicked cancel');
+                // this.$Message.info('Clicked cancel');
             }
         },
         created () {
