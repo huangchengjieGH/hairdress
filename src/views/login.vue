@@ -118,6 +118,7 @@ export default {
                             //         name: 'home_index'
                             //     });
                             // }
+                            console.log('跳转');
                             that.$router.push({
                                 name: 'home_index'
                             });
