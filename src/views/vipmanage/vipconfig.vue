@@ -83,7 +83,7 @@
             },
             getVipDiscountRate () {
                 const that = this;
-                let url = `api/admin/viprank?sellerId=${sellerId}`;
+                let url = `/api/admin/viprank?sellerId=${sellerId}`;
                 return new Promise(function (resolve, reject) {
                     that.$axios({
                         url: url,
