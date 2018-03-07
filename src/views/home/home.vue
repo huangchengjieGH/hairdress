@@ -146,7 +146,7 @@ import inforCard from './components/inforCard.vue';
 import {dateFormat} from '@/tool/transform.js';
 import qs from 'qs';
 import echarts from 'echarts';
-import {sellerId} from '@/tool/const.js';
+// import {sellerId} from '@/tool/const.js';
 
 const option = {
     tooltip: {
@@ -217,6 +217,7 @@ export default {
     },
     data () {
         return {
+            sellerId: localStorage.getItem('sellerId'),
             count: {
                 createUser: 496,
                 visit: 3264,
@@ -261,7 +262,7 @@ export default {
                     url: '/api/admin/report/vip',
                     method: 'post',
                     params: {
-                        sellerId: sellerId
+                        sellerId: that.sellerId
                     }
                 }).then(res => {
                     // console.log(res);
@@ -279,7 +280,7 @@ export default {
             // data.beginDate = sdate;
             // data.endDate = sdate;
             data = this.getDate(2);
-            data.sellerId = sellerId;
+            data.sellerId = that.sellerId;
             return new Promise(function (resolve, reject) {
                 that.$axios({
                     url: '/api/admin/report/situation',
@@ -307,7 +308,7 @@ export default {
             const that = this;
             let data = {};
             data = this.getDate(4);
-            data.sellerId = sellerId;
+            data.sellerId = that.sellerId;
             return new Promise(function (resolve, reject) {
                 that.$axios({
                     url: '/api/admin/report/situation',
