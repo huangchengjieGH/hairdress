@@ -52,7 +52,7 @@
 <script>
     import canEditTable from './components/canEditTable.vue';
     import tableData from './components/table_data.js';
-    import {sellerId} from '@/tool/const.js';
+    // import {sellerId} from '@/tool/const.js';
     export default {
         name: 'vipmanage',
         components: {
@@ -62,6 +62,7 @@
             return {
                 // columnsList: [],
                 // tableData: [],
+                sellerId: localStorage.getItem('sellerId'),
                 inputPhone: '',
                 nickname: '',
                 phone: '',
@@ -83,7 +84,7 @@
             getVipCustomerMsg () {
                 const that = this;
                 return new Promise(function (resolve, reject) {
-                    let url = `/api/admin/customer?sellerId=${sellerId}`
+                    let url = `/api/admin/customer?sellerId=${that.sellerId}`
                     that.$axios({
                         url: url,
                         method: 'get'

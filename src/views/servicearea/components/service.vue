@@ -60,11 +60,12 @@
 </template>
 
 <script>
-    import {sellerId} from '@/tool/const.js';
+    // import {sellerId} from '@/tool/const.js';
     export default {
         name: 'service',
         data () {
             return {
+                sellerId: localStorage.getItem('sellerId'),
                 serviceId: '',
                 serviceStyle: '',
                 serviceName: '',
@@ -128,7 +129,7 @@
                 let method = 'post';
                 let obj = {};
                 if (that.isValid()) {
-                    obj.sellerId = sellerId;
+                    obj.sellerId = that.sellerId;
                     obj.serviceId = that.serviceId;
                     obj.name = that.serviceName;
                     obj.price = that.price;

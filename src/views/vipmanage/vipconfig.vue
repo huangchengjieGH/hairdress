@@ -57,7 +57,7 @@
 <script>
     import tableData from './components/table_data.js';
     import canEditTable from './components/canEditTable.vue';
-    import {sellerId} from '@/tool/const.js';
+    // import {sellerId} from '@/tool/const.js';
     export default {
         name: 'vipconfig',
         components: {
@@ -65,6 +65,7 @@
         },
         data () {
             return {
+                sellerId: localStorage.getItem('sellerId'),
                 editInlineColumns: [],
                 rechargeDiscountColumns: [],
                 vipRankList: [],
@@ -83,7 +84,7 @@
             },
             getVipDiscountRate () {
                 const that = this;
-                let url = `/api/admin/viprank?sellerId=${sellerId}`;
+                let url = `/api/admin/viprank?sellerId=${that.sellerId}`;
                 return new Promise(function (resolve, reject) {
                     that.$axios({
                         url: url,
@@ -100,7 +101,7 @@
             getRechargeDiscountMsg () {
                 const that = this;
                 return new Promise(function (resolve, reject) {
-                    let url = `/api/admin/recharge?sellerId=${sellerId}`
+                    let url = `/api/admin/recharge?sellerId=${that.sellerId}`
                     that.$axios({
                         url: url,
                         method: 'get'
@@ -216,7 +217,7 @@
                 // this.$Message.info('Clicked ok');
                 const that = this;
                 let obj = {
-                    sellerId: 2,
+                    sellerId: that.sellerId,
                     rechargeValue: that.inputPrice,
                     discountValue: that.discountValue,
                     status: 1

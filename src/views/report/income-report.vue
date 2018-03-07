@@ -75,7 +75,7 @@
     import {dateFormat} from '@/tool/transform.js';
     import qs from 'qs';
     import echarts from 'echarts';
-    import {sellerId} from '@/tool/const.js';
+    // import {sellerId} from '@/tool/const.js';
     export default {
         name: 'income-report',
         components: {
@@ -83,6 +83,7 @@
         },
         data () {
             return {
+                sellerId: localStorage.getItem('sellerId'),
                 chosedDate: new Date(),
                 todaySituation: [],
                 count: {
@@ -129,7 +130,7 @@
                 let data = {};
                 data.beginDate = sdate;
                 data.endDate = sdate;
-                data.sellerId = sellerId;
+                data.sellerId = that.sellerId;
                 return new Promise(function (resolve, reject) {
                     that.$axios({
                         url: '/api/admin/report/situation',
@@ -153,7 +154,7 @@
                 let sdate = dateFormat(that.chosedDate);
                 let data = {};
                 data.date = sdate;
-                data.sellerId = sellerId;
+                data.sellerId = that.sellerId;
                 return new Promise(function (resolve, reject) {
                     that.$axios({
                         url: '/api/admin/report/turnover',

@@ -93,11 +93,12 @@
 </template>
 
 <script>
-    import {sellerId} from '@/tool/const.js';
+    // import {sellerId} from '@/tool/const.js';
     export default {
         name: 'create-coupon',
         data () {
             return {
+                sellerId: localStorage.getItem('sellerId'),
                 name: '',
                 couponValue: '',
                 base: '',
@@ -186,7 +187,7 @@
                 let method = 'post';
                 let obj = {};
                 if (that.isValid()) {
-                    obj.sellerId = sellerId;
+                    obj.sellerId = that.sellerId;
                     obj.typeId = that.typeId;
                     obj.typeName = that.typeName;
                     obj.name = that.name;

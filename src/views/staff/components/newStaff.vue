@@ -121,7 +121,7 @@
     import ICol from 'iview/src/components/grid/col';
     import uploadImg from '@/common/uploadImg.vue';
     import {convertBase64UrlToBlob} from '@/tool/transform.js';
-    import {sellerId} from '@/tool/const.js';
+    // import {sellerId} from '@/tool/const.js';
     export default {
         name: 'newstaff_index',
         components: {
@@ -131,6 +131,7 @@
         },
         data () {
             return {
+                sellerId: localStorage.getItem('sellerId'),
                 defaultList: [
                     {
                         'name': 'bc7521e033abdd1e92222d733590f104',
@@ -380,7 +381,7 @@
                 if (that.isValid()) {
                     await that.sumitAvatarFile();
                     await that.sumitImageFile();
-                    obj.sellerId = sellerId;
+                    obj.sellerId = that.sellerId;
                     obj.name = that.staffName;
                     obj.jobNum = that.jobNum;
                     obj.job = that.job;

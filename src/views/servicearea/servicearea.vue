@@ -50,7 +50,7 @@
 <script>
     import canEditTable from './components/canEditTable.vue';
     import tableData from './components/table_data.js';
-    import {sellerId} from '@/tool/const.js';
+    // import {sellerId} from '@/tool/const.js';
     export default {
         name: 'servicearea_index',
         components: {
@@ -58,6 +58,7 @@
         },
         data () {
             return {
+                sellerId: localStorage.getItem('sellerId'),
                 serviceClassifyList: [],
                 articleTagSelected: '', // 选中的标签
                 // articleTagList: [], // 所有标签列表
@@ -73,7 +74,7 @@
         methods: {
             getService () {
                 const that = this;
-                let url = `/api/admin/service?sellerId=${sellerId}`;
+                let url = `/api/admin/service?sellerId=${that.sellerId}`;
                 return new Promise(function (resolve, reject) {
                     that.$axios({
                         url: url,
@@ -89,7 +90,7 @@
             },
             getServiceClassifyList () {
                 const that = this;
-                let url = `/api/admin/service/classify?sellerId=${sellerId}`
+                let url = `/api/admin/service/classify?sellerId=${that.sellerId}`
                 return new Promise(function (resolve, reject) {
                     that.$axios({
                         url: url,
@@ -106,7 +107,7 @@
             addServiceClassify () {
                 const that = this;
                 let obj = {
-                    sellerId: sellerId,
+                    sellerId: that.sellerId,
                     name: that.newTagName,
                     status: 1
                 };

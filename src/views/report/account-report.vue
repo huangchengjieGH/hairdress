@@ -77,7 +77,7 @@
     import {table2excelData, excelColumns} from './data/table2excel.js';
     import table2excel from '@/libs/table2excel.js';
     import {dateFormat} from '@/tool/transform.js';
-    import {sellerId} from '@/tool/const.js';
+    // import {sellerId} from '@/tool/const.js';
     import qs from 'qs';
     export default {
         name: 'account-report',
@@ -86,6 +86,7 @@
         },
         data () {
             return {
+                sellerId: localStorage.getItem('sellerId'),
                 beginDate: new Date(),
                 endDate: new Date(),
                 table2excelData: table2excelData,
@@ -114,7 +115,7 @@
                 let data = {};
                 data.beginDate = begindate;
                 data.endDate = endDate;
-                data.sellerId = sellerId;
+                data.sellerId = that.sellerId;
                 return new Promise(function (resolve, reject) {
                     that.$axios({
                         url: '/api/admin/report/orderprice',
@@ -140,7 +141,7 @@
                 let data = {};
                 data.beginDate = begindate;
                 data.endDate = endDate;
-                data.sellerId = sellerId;
+                data.sellerId = that.sellerId;
                 return new Promise(function (resolve, reject) {
                     that.$axios({
                         url: '/api/admin/report/situation',

@@ -27,7 +27,7 @@
     import {dateFormat} from '@/tool/transform.js';
     import * as table from './data/search';
     import canEditTable from './components/canEditTable.vue';
-    import {sellerId} from '@/tool/const.js';
+    // import {sellerId} from '@/tool/const.js';
     export default {
         name: 'coupon',
         components: {
@@ -38,6 +38,7 @@
         },
         data () {
             return {
+                sellerId: localStorage.getItem('sellerId'),
                 couponStatusList: [
                     {
                         value: '2',
@@ -66,7 +67,7 @@
             // },
             getCoupons () {
                 const that = this;
-                let url = `/api/admin/sellercoupon?sellerId=${sellerId}`
+                let url = `/api/admin/sellercoupon?sellerId=${that.sellerId}`
                 return new Promise(function (resolve, reject) {
                     that.$axios({
                         url: url,

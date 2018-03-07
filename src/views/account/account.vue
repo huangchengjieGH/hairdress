@@ -183,12 +183,13 @@
 </template>
 
 <script>
-    import {sellerId} from '@/tool/const.js';
+    // import {sellerId} from '@/tool/const.js';
     import qs from 'qs';
     export default {
         name: 'account',
         data () {
             return {
+                sellerId: localStorage.getItem('sellerId'),
                 user: {},
                 showAdminEdit: false,
                 showGroupEdit: false,
@@ -375,12 +376,12 @@
                 const that = this;
                 that.currentPage = page || that.currentPage;
                 let data = {};
-                data.sellerId = sellerId;
+                data.sellerId = that.sellerId;
                 that.$axios({
                     url: `/api/user`,
                     method: 'get',
                     params: {
-                        sellerId : sellerId,
+                        sellerId : that.sellerId,
                         pageSize: that.pageSize,
                         currentPage: that.currentPage
                     }
@@ -451,7 +452,7 @@
                     let url = 'api/user/role';
                     let method = 'post';
                     let data = {
-                        sellerId: sellerId,
+                        sellerId: that.sellerId,
                         role: that.group.role,
                         permissions,
                     };
@@ -500,7 +501,7 @@
             getGroupList () {
                 const that = this;
                 let data = {};
-                data.sellerId = sellerId;
+                data.sellerId = that.sellerId;
                 // let url = `/api/user?sellerId=${sellerId}`
                 that.$axios({
                     url: '/api/user/role/get',
@@ -692,7 +693,7 @@
                         //     roles: 'business'
                         // };
                         let params = {
-                            sellerId : sellerId,
+                            sellerId : that.sellerId,
                             username: that.admin.username,
                             password: that.admin.password,
                             role: 'business',
