@@ -47,6 +47,7 @@ export const excelColumns = [
     {
         'title': '时间',
         'key': 'time',
+        'sortable': true,
         'width': 160
     },
     {
