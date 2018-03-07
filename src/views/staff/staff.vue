@@ -136,7 +136,9 @@
         mounted () {
             console.log('mounted');
             let seller = sessionStorage.getItem('sellerId')
+            let user = JSON.parse(sessionStorage.getItem('user'))
             console.log(seller);
+            console.log(user);
             this.getBarberLists();
         },
         created () {

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3eea8e69-788a-48e7-87b6-99d6e66a246f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/views/login.vue" afterPath="$PROJECT_DIR$/src/views/login.vue" />
+      <change beforePath="$PROJECT_DIR$/src/views/staff/staff.vue" afterPath="$PROJECT_DIR$/src/views/staff/staff.vue" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -49,8 +49,8 @@
       <file leaf-file-name="staff.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/views/staff/staff.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="138" column="32" lean-forward="true" selection-start-line="138" selection-start-column="32" selection-end-line="138" selection-end-column="32" />
+            <state relative-caret-position="438">
+              <caret line="140" column="30" lean-forward="false" selection-start-line="140" selection-start-column="30" selection-end-line="140" selection-end-column="30" />
               <folding>
                 <element signature="e#1330#1387#0" expanded="true" />
               </folding>
@@ -149,7 +149,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>hcj</find>
       <find>deleteService</find>
       <find>saveAdminInfo</find>
       <find>isValidAdmin</find>
@@ -179,6 +178,7 @@
       <find>这部分为</find>
       <find>await</find>
       <find>sumitAvatarFile</find>
+      <find>sessionStorage.getItem</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/views/tables</dir>
@@ -410,7 +410,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="337417000" />
+    <option name="totallyTimeSpent" value="337915000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -879,8 +879,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/staff/staff.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="138" column="32" lean-forward="true" selection-start-line="138" selection-start-column="32" selection-end-line="138" selection-end-column="32" />
+        <state relative-caret-position="438">
+          <caret line="140" column="30" lean-forward="false" selection-start-line="140" selection-start-column="30" selection-end-line="140" selection-end-column="30" />
           <folding>
             <element signature="e#1330#1387#0" expanded="true" />
           </folding>
