@@ -89,6 +89,8 @@ export default {
                         if (res.data.status === 1) {
                             let user = res.data.data;
                             let routeName = '';
+                            console.log(user.username);
+                            console.log(user.sellerId);
                             localStorage.setItem('userName', user.username);
                             localStorage.setItem('sellerId', user.sellerId);
                             sessionStorage.setItem('user', JSON.stringify({
