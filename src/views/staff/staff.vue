@@ -135,7 +135,7 @@
         },
         mounted () {
             console.log('mounted');
-            let seller = sessionStorage.getItem('sellerId')
+            let seller = localStorage.getItem('sellerId')
             let user = JSON.parse(sessionStorage.getItem('user'))
             console.log(seller);
             console.log(user);

@@ -49,8 +49,8 @@
       <file leaf-file-name="staff.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/views/staff/staff.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="140" column="30" lean-forward="false" selection-start-line="140" selection-start-column="30" selection-end-line="140" selection-end-column="30" />
+            <state relative-caret-position="334">
+              <caret line="142" column="10" lean-forward="true" selection-start-line="142" selection-start-column="10" selection-end-line="142" selection-end-column="10" />
               <folding>
                 <element signature="e#1330#1387#0" expanded="true" />
               </folding>
@@ -410,7 +410,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="337915000" />
+    <option name="totallyTimeSpent" value="338296000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -879,8 +879,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/staff/staff.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="140" column="30" lean-forward="false" selection-start-line="140" selection-start-column="30" selection-end-line="140" selection-end-column="30" />
+        <state relative-caret-position="334">
+          <caret line="142" column="10" lean-forward="true" selection-start-line="142" selection-start-column="10" selection-end-line="142" selection-end-column="10" />
           <folding>
             <element signature="e#1330#1387#0" expanded="true" />
           </folding>
