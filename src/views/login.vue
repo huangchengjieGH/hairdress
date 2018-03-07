@@ -90,6 +90,7 @@ export default {
                             let user = res.data.data;
                             let routeName = '';
                             localStorage.setItem('userName', user.username);
+                            localStorage.setItem('sellerId', user.sellerId);
                             sessionStorage.setItem('user', JSON.stringify({
                                 userName: user.username,
                                 permissions: user.permissions,
