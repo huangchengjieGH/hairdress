@@ -34,7 +34,7 @@
 <script>
     import canEditTable from './components/canEditTable.vue';
     import tableData from './components/table_data.js';
-    import {sellerId} from '@/tool/const.js';
+    // import {sellerId} from '@/tool/const.js';
     export default {
         name: 'staff_index',
         components: {
@@ -42,6 +42,7 @@
         },
         data () {
             return {
+                sellerId: localStorage.getItem('sellerId'),
                 searchConName3: '',
                 columnsList: [],
                 tableData: [],
@@ -52,7 +53,7 @@
         methods: {
             getBarberLists () {
                 const that = this;
-                let url = `/api/admin/barber/get?sellerId=${sellerId}`;
+                let url = `/api/admin/barber/get?sellerId=${that.sellerId}`;
                 return new Promise(function (resolve, reject) {
                     that.$axios({
                         url: url,
@@ -135,10 +136,7 @@
         },
         mounted () {
             console.log('mounted');
-            let seller = localStorage.getItem('sellerId')
-            let user = JSON.parse(sessionStorage.getItem('user'))
-            console.log(seller);
-            console.log(user);
+            // let seller = localStorage.getItem('sellerId')
             this.getBarberLists();
         },
         created () {
