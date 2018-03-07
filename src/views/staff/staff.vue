@@ -134,9 +134,9 @@
             }
         },
         mounted () {
-            // console.log('mounted');
+            console.log('mounted');
             let seller = sessionStorage.getItem(sellerId)
-            console.log('seller');
+            console.log(seller);
             this.getBarberLists();
         },
         created () {
