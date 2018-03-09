@@ -350,9 +350,9 @@
                 if (that.evaluate === '') {
                     msg += `${index++}、员工评价不能为空<br/><br/>`;
                 }
-                if (that.Avatars.length === 0) {
-                    msg += `${index++}、员工头像不能为空<br/><br/>`;
-                }
+                // if (that.Avatars.length === 0) {
+                //     msg += `${index++}、员工头像不能为空<br/><br/>`;
+                // }
                 if (that.barberSkills.length === 0) {
                     msg += `${index++}、员工标签不能为空<br/><br/>`;
                 }

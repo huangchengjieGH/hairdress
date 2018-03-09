@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3eea8e69-788a-48e7-87b6-99d6e66a246f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/views/report/data/table2excel.js" afterPath="$PROJECT_DIR$/src/views/report/data/table2excel.js" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/views/report/account-report.vue" afterPath="$PROJECT_DIR$/src/views/report/account-report.vue" />
+      <change beforePath="$PROJECT_DIR$/src/views/staff/components/newStaff.vue" afterPath="$PROJECT_DIR$/src/views/staff/components/newStaff.vue" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,11 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="account-report.vue" pinned="false" current-in-tab="false">
+      <file leaf-file-name="account-report.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/views/report/account-report.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="120" column="41" lean-forward="true" selection-start-line="120" selection-start-column="41" selection-end-line="120" selection-end-column="58" />
+            <state relative-caret-position="356">
+              <caret line="240" column="44" lean-forward="false" selection-start-line="240" selection-start-column="44" selection-end-line="240" selection-end-column="44" />
               <folding>
                 <element signature="e#3912#3959#0" expanded="true" />
               </folding>
@@ -40,7 +42,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="table2excel.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="table2excel.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/report/data/table2excel.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
@@ -115,21 +117,19 @@
       <file leaf-file-name="createCoupon.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/coupon/components/createCoupon.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
+            <state relative-caret-position="-1146">
               <caret line="100" column="16" lean-forward="true" selection-start-line="100" selection-start-column="16" selection-end-line="100" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vipmanage.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/vipmanage/vipmanage.vue">
+      <file leaf-file-name="newStaff.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/staff/components/newStaff.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="64" column="16" lean-forward="true" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="59" />
-              <folding>
-                <element signature="e#2677#2734#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="347">
+              <caret line="353" column="24" lean-forward="false" selection-start-line="353" selection-start-column="24" selection-end-line="353" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -157,7 +157,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>groupList</find>
       <find>handleEditModal</find>
       <find>message</find>
       <find>message_index</find>
@@ -183,10 +182,11 @@
       <find>await</find>
       <find>sumitAvatarFile</find>
       <find>sessionStorage.getItem</find>
-      <find>sellerId</find>
       <find>excelColumns</find>
       <find>orderPriceList</find>
       <find>processOrderPriceData</find>
+      <find>sellerId</find>
+      <find>isValid</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/views/tables</dir>
@@ -237,18 +237,18 @@
         <option value="$PROJECT_DIR$/build/webpack.prod.config.js" />
         <option value="$PROJECT_DIR$/src/views/login.vue" />
         <option value="$PROJECT_DIR$/src/views/staff/staff.vue" />
-        <option value="$PROJECT_DIR$/src/views/staff/components/newStaff.vue" />
         <option value="$PROJECT_DIR$/src/views/servicearea/servicearea.vue" />
         <option value="$PROJECT_DIR$/src/views/servicearea/components/service.vue" />
         <option value="$PROJECT_DIR$/src/views/coupon/coupon.vue" />
         <option value="$PROJECT_DIR$/src/views/coupon/components/createCoupon.vue" />
         <option value="$PROJECT_DIR$/src/views/vipmanage/vipconfig.vue" />
         <option value="$PROJECT_DIR$/src/views/vipmanage/vipmanage.vue" />
-        <option value="$PROJECT_DIR$/src/views/report/account-report.vue" />
         <option value="$PROJECT_DIR$/src/views/report/income-report.vue" />
         <option value="$PROJECT_DIR$/src/views/account/account.vue" />
         <option value="$PROJECT_DIR$/src/views/home/home.vue" />
         <option value="$PROJECT_DIR$/src/views/report/data/table2excel.js" />
+        <option value="$PROJECT_DIR$/src/views/staff/components/newStaff.vue" />
+        <option value="$PROJECT_DIR$/src/views/report/account-report.vue" />
       </list>
     </option>
   </component>
@@ -264,7 +264,7 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="193" />
+    <option name="x" value="110" />
     <option name="y" value="23" />
     <option name="width" value="1413" />
     <option name="height" value="967" />
@@ -318,7 +318,15 @@
               <item name="iview-admin-dev" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="report" type="462c0819:PsiDirectoryNode" />
+              <item name="coupon" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iview-admin-dev" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iview-admin-dev" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="coupon" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="iview-admin-dev" type="b2602c69:ProjectViewProjectNode" />
@@ -326,6 +334,28 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="report" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iview-admin-dev" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iview-admin-dev" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="staff" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iview-admin-dev" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iview-admin-dev" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="staff" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iview-admin-dev" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iview-admin-dev" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="staff" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -419,7 +449,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="342732000" />
+    <option name="totallyTimeSpent" value="346083000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -431,7 +461,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="193" y="23" width="1413" height="967" extended-state="0" />
+    <frame x="110" y="23" width="1413" height="967" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23994254" sideWeight="0.7422003" order="0" side_tool="false" content_ui="combo" />
@@ -767,16 +797,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/staff/components/newStaff.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="133" column="16" lean-forward="true" selection-start-line="133" selection-start-column="16" selection-end-line="133" selection-end-column="59" />
-          <folding>
-            <element signature="e#5144#5190#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/servicearea/servicearea.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
@@ -795,20 +815,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/coupon/components/createCoupon.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="100" column="16" lean-forward="true" selection-start-line="100" selection-start-column="16" selection-end-line="100" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/vipmanage/vipmanage.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="326">
           <caret line="64" column="16" lean-forward="true" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="59" />
           <folding>
-            <element signature="e#2677#2734#0" expanded="true" />
+            <element signature="e#2677#2734#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -887,21 +899,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/report/account-report.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="120" column="41" lean-forward="true" selection-start-line="120" selection-start-column="41" selection-end-line="120" selection-end-column="58" />
-          <folding>
-            <element signature="e#3912#3959#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/report/data/table2excel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="54" column="21" lean-forward="true" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/coupon/components/createCoupon.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1146">
+          <caret line="100" column="16" lean-forward="true" selection-start-line="100" selection-start-column="16" selection-end-line="100" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/staff/components/newStaff.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="353" column="24" lean-forward="false" selection-start-line="353" selection-start-column="24" selection-end-line="353" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/report/account-report.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="240" column="44" lean-forward="false" selection-start-line="240" selection-start-column="44" selection-end-line="240" selection-end-column="44" />
+          <folding>
+            <element signature="e#3912#3959#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

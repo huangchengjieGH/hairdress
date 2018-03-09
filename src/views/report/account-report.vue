@@ -238,6 +238,7 @@
         mounted () {
             // this.$Message.info(sellerId);
             this.getOrderPriceData();
+            this.getSummaryOrderPriceData();
         }
     };
 </script>
