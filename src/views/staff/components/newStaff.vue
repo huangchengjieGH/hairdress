@@ -403,7 +403,7 @@
                         if (res.data.status === 1) {
                             that.$Message.success(res.data.msg);
                             that.closePage('newstaff_index');
-                            that.$router.push({path: 'staff_index'});
+                            that.$router.push({name: 'staff_index'});
                         } else {
                             that.$Message.error(res.data.msg);
                         }
