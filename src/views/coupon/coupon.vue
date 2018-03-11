@@ -152,9 +152,9 @@
             },
             handleDel (val, index) {
                 const that = this;
-                // console.log(index);
-                // console.log(this.serviceListData[index].id);
-                if (that.couponData[index].status === 1) {
+                console.log(index);
+                console.log(this.couponData);
+                if (that.couponData[index].status === '进行中') {
                     this.disableCoupon(that.couponData[index].id);
                 } else {
                     this.$Message.info('这个优惠券已经下架');
