@@ -45,6 +45,30 @@
                 <!--</div>-->
                 </i-Col>
             </Row>
+            <Modal
+                    v-model="modal2"
+                    title="编辑会员信息"
+                    @on-ok="comfirmOk"
+                    @on-cancel="cancel">
+                <Row class="margin10">
+                    <i-col span="4">密码</i-col>
+                    <i-col span="16">
+                        <i-input type="password" v-model="password"></i-input>
+                    </i-col>
+                </Row>
+            </Modal>
+            <Modal
+                    v-model="modal3"
+                    title="删除会员信息"
+                    @on-ok="comfirmDelete"
+                    @on-cancel="delcancel">
+                <Row class="margin10">
+                    <i-col span="4">密码</i-col>
+                    <i-col span="16">
+                        <i-input type="password" v-model="password"></i-input>
+                    </i-col>
+                </Row>
+            </Modal>
         </Card>
     </div>
 </template>
@@ -52,6 +76,7 @@
 <script>
     import canEditTable from './components/canEditTable.vue';
     import tableData from './components/table_data.js';
+    import qs from 'qs';
     // import {sellerId} from '@/tool/const.js';
     export default {
         name: 'vipmanage',
@@ -73,7 +98,12 @@
                 editInlineColumns: [],
                 editInlineData: [],
                 vipCustomerList: [],
-                vipCustomerData: []
+                vipCustomerData: [],
+                modal2: false,
+                modal3: false,
+                password: '',
+                changeIndex: '',
+                delIndex: ''
             };
         },
         methods: {
@@ -97,6 +127,66 @@
                     });
                 });
             },
+            modifyPassword () {
+                const that = this;
+                return new Promise(function (resolve, reject) {
+                    let url = '/api/admin/viprank/certified';
+                    let data = {};
+                    data.sellerId = that.sellerId;
+                    data.password = that.password;
+                    that.$axios({
+                        url: url,
+                        method: 'post',
+                        header: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                            'Accept': 'application/json'
+                        },
+                        data: qs.stringify(data)
+                    }).then(res => {
+                        console.log(res);
+                        if (res.data.data === 'success') {
+                            // that.$Message.success('修改了第' + (index + 1) + '行数据');
+                            that.changeVipCustomerMsg(that.vipCustomerList[that.changeIndex]);
+                        } else {
+                            that.$Message.success('密码错误');
+                            that.getVipCustomerMsg();
+                        }
+                        resolve();
+                    }, err => {
+                        console.log(err);
+                    });
+                });
+            },
+            modifyPassword2 () {
+                const that = this;
+                return new Promise(function (resolve, reject) {
+                    let url = '/api/admin/viprank/certified';
+                    let data = {};
+                    data.sellerId = that.sellerId;
+                    data.password = that.password;
+                    that.$axios({
+                        url: url,
+                        method: 'post',
+                        header: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                            'Accept': 'application/json'
+                        },
+                        data: qs.stringify(data)
+                    }).then(res => {
+                        console.log(res);
+                        if (res.data.data === 'success') {
+                            // that.$Message.success('修改了第' + (index + 1) + '行数据');
+                            that.disableVipCustomerMsg(that.vipCustomerData[that.delIndex].id);
+                        } else {
+                            that.$Message.success('密码错误');
+                            that.getVipCustomerMsg();
+                        }
+                        resolve();
+                    }, err => {
+                        console.log(err);
+                    });
+                });
+            },
             disableVipCustomerMsg (id) {
                 const that = this;
                 return new Promise(function (resolve, reject) {
@@ -104,7 +194,7 @@
                         url: `/api/admin/customer/${id}`,
                         method: 'post'
                     }).then(res => {
-                        console.log(res);
+                        // console.log(res);
                         that.getVipCustomerMsg();
                         that.$Message.info('删除成功');
                         resolve();
@@ -137,7 +227,7 @@
             },
             changeVipCustomerMsg (data) {
                 const that = this;
-                console.log(data);
+                // console.log(data);
                 return new Promise(function (resolve, reject) {
                     that.$axios({
                         url: '/api/admin/customer/change',
@@ -191,24 +281,35 @@
             },
             handleDel (val, index) {
                 const that = this;
-                this.$Message.success('删除了第' + (index + 1) + '行数据');
-                // console.log(that.vipCustomerData);
-                // console.log(that.vipCustomerData[index].id);
-                this.disableVipCustomerMsg(that.vipCustomerData[index].id);
+                // this.$Message.success('删除了第' + (index + 1) + '行数据');
+                this.modal3 = true;
+                this.delIndex = index;
+                // this.disableVipCustomerMsg(that.vipCustomerData[index].id);
             },
             handleCellChange (val, index, key) {
                 this.$Message.success('修改了第 ' + (index + 1) + ' 行列名为 ' + key + ' 的数据');
             },
             handleChange (val, index) {
-                this.$Message.success('修改了第' + (index + 1) + '行数据');
-                // console.log(this.vipCustomerList[index]);
-                this.changeVipCustomerMsg(this.vipCustomerList[index]);
+                this.modal2 = true;
+                this.changeIndex = index;
+                // this.$Message.success('修改了第' + (index + 1) + '行数据');
+                // this.changeVipCustomerMsg(this.vipCustomerList[index]);
+            },
+            comfirmOk () {
+                this.modifyPassword();
+            },
+            comfirmDelete () {
+                const that = this;
+                this.modifyPassword2();
             },
             ok () {
                 this.$Message.info('Clicked ok');
             },
             cancel () {
                 this.$Message.info('Clicked cancel');
+            },
+            delcancel () {
+                this.getVipCustomerMsg();
             }
         },
         created () {
